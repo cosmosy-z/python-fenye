@@ -35,6 +35,7 @@ class IndexHandler(tornado.web.RequestHandler):
 
         page_now = math.ceil((len(LIST_INFO)+1)/5) #传给前端的页数，保证是当前页数，这一句话相当于有多少信息 ／ 每页5条 ＝ 当前是第多少页, 比如当前已经有5条信息，这个时候pagenow就要等于2了，因为这时候如果＝1，那么发过去到前端，前端这时的current——page还是1，前端点提交psot往后端发的时候，发过来的就是1，而不是2，所以第5条的时候，pagenow要等于2
 
+        #接下来要尝试把这个做成一个模块
         str_page = """"""
         all_pager = math.ceil(len(LIST_INFO)/5)
 
