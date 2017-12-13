@@ -4,7 +4,8 @@ from controllers import home
 
 settings = {
     "template_path":"views",
-    "static_path":"statics"
+    "static_path":"statics",
+    'static_url_prefix':'/statics/',
 }
 
 application = tornado.web.Application([
